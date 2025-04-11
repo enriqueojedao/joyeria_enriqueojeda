@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "1fd3e8aa-4e28-409f-86de-ea422efcf702",
+		"name": "API REST JOYERIA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24912549"
+	},
+	"item": [
+		{
+			"name": "GET - JOYAS FILTRADAS",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/joyas/filtros?precio_min=25000&precio_max=30000&categoria=aros&metal=plata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"joyas",
+						"filtros"
+					],
+					"query": [
+						{
+							"key": "precio_min",
+							"value": "25000"
+						},
+						{
+							"key": "precio_max",
+							"value": "30000"
+						},
+						{
+							"key": "categoria",
+							"value": "aros"
+						},
+						{
+							"key": "metal",
+							"value": "plata"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - JOYA POR ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/joyas/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"joyas",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - TODAS LAS JOYAS HATEOAS",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/joyas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"joyas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - HATEOAS CON LIMIT DESAFÍO",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/joyas?limits=3&page=2&order_by=stock_ASC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"joyas"
+					],
+					"query": [
+						{
+							"key": "limits",
+							"value": "3"
+						},
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "order_by",
+							"value": "stock_ASC"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
